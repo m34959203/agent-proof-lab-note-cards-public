@@ -1,0 +1,7 @@
+SAMPLE — original synthetic workshop notes, written for Note Cards tests.
+
+At the fictional Paper Lantern Workshop, participants build a tabletop bridge from folded card. Each team receives six sheets of card, a ruler and removable tape. The bridge spans a 20 centimetre gap between two wooden blocks. Teams fold each sheet lengthwise into a triangular beam before connecting the beams with tape.
+
+The workshop has three rounds: sketch, build and observe. The sketch round lasts five minutes. The build round lasts twelve minutes. During the observe round, teams place wooden counters one at a time in the centre of the bridge. They stop when the deck touches the table. Counters are removed before anyone adjusts the bridge.
+
+A recorder writes down the number of counters supported and draws where the bridge bent. Teams change only one feature before repeating the observation. This helps them compare the effect of that change. The final discussion compares observations; it does not award a strongest-bridge prize. All card scraps go into the labelled reuse tray for the next workshop.

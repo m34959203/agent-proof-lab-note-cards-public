@@ -1,0 +1,29 @@
+
+> note-cards-local@0.1.0 test:loopback
+> node --experimental-test-isolation=none --test checks/loopback.js
+
+TAP version 13
+# Subtest: actual loopback listener serves browser entry point
+not ok 1 - actual loopback listener serves browser entry point
+  ---
+  duration_ms: 6.219332
+  type: 'test'
+  location: '<PROJECT_ROOT>/checks/loopback.js:9:1'
+  failureType: 'testCodeFailure'
+  error: 'listen EPERM: operation not permitted 127.0.0.1'
+  code: 'EPERM'
+  stack: |-
+    Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    listenInCluster (node:net:1997:12)
+    node:net:2206:7
+    process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25.97681

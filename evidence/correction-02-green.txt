@@ -1,0 +1,133 @@
+CORRECTION-02 new diagnostic run, after production patch.
+Command: npm test
+Exit code: 0
+NOT_TESTED: real browser, layout, live model.
+
+
+> note-cards-local@0.1.0 test
+> node --experimental-test-isolation=none --test test/*.test.js
+
+TAP version 13
+# Subtest: input boundaries, exact quotes, empty decks and schema validation
+ok 1 - input boundaries, exact quotes, empty decks and schema validation
+  ---
+  duration_ms: 1.344695
+  type: 'test'
+  ...
+# Subtest: generate → edit/delete → explicit approval → study → restart → export/import
+ok 2 - generate → edit/delete → explicit approval → study → restart → export/import
+  ---
+  duration_ms: 14.933556
+  type: 'test'
+  ...
+# Subtest: invalid and oversized imports preserve saved data; stale approvals rejected
+ok 3 - invalid and oversized imports preserve saved data; stale approvals rejected
+  ---
+  duration_ms: 4.278272
+  type: 'test'
+  ...
+# Subtest: failed atomic write leaves prior disk and in-memory state intact and retry works
+ok 4 - failed atomic write leaves prior disk and in-memory state intact and retry works
+  ---
+  duration_ms: 5.442687
+  type: 'test'
+  ...
+# Subtest: security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+ok 5 - security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+  ---
+  duration_ms: 3.715641
+  type: 'test'
+  ...
+# Subtest: adapter verifies digest, bounds request, and returns only validated injected cards
+ok 6 - adapter verifies digest, bounds request, and returns only validated injected cards
+  ---
+  duration_ms: 3.20112
+  type: 'test'
+  ...
+# Subtest: adapter missing configuration and bad digest never generate; resource failure latches
+ok 7 - adapter missing configuration and bad digest never generate; resource failure latches
+  ---
+  duration_ms: 0.482525
+  type: 'test'
+  ...
+# Subtest: adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+ok 8 - adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+  ---
+  duration_ms: 2.681276
+  type: 'test'
+  ...
+# Subtest: adapter has one generation slot, bounded timeout, then stops dependency
+ok 9 - adapter has one generation slot, bounded timeout, then stops dependency
+  ---
+  duration_ms: 26.086875
+  type: 'test'
+  ...
+# Subtest: UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+ok 10 - UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+  ---
+  duration_ms: 2.232937
+  type: 'test'
+  ...
+# Subtest: pending regeneration preserves a newer question edit
+ok 11 - pending regeneration preserves a newer question edit
+  ---
+  duration_ms: 1.042082
+  type: 'test'
+  ...
+# Subtest: pending regeneration preserves a newer answer edit
+ok 12 - pending regeneration preserves a newer answer edit
+  ---
+  duration_ms: 0.696536
+  type: 'test'
+  ...
+# Subtest: pending regeneration preserves a newer quote edit
+ok 13 - pending regeneration preserves a newer quote edit
+  ---
+  duration_ms: 0.672452
+  type: 'test'
+  ...
+# Subtest: pending regeneration preserves a deletion
+ok 14 - pending regeneration preserves a deletion
+  ---
+  duration_ms: 0.721217
+  type: 'test'
+  ...
+# Subtest: pending regeneration cannot resurrect an approved draft: generation-first
+ok 15 - pending regeneration cannot resurrect an approved draft: generation-first
+  ---
+  duration_ms: 1.006045
+  type: 'test'
+  ...
+# Subtest: pending regeneration cannot resurrect an approved draft: approval-first
+ok 16 - pending regeneration cannot resurrect an approved draft: approval-first
+  ---
+  duration_ms: 1.290323
+  type: 'test'
+  ...
+# Subtest: UI edit/delete requires reapproval; disk error preserves the editable draft
+ok 17 - UI edit/delete requires reapproval; disk error preserves the editable draft
+  ---
+  duration_ms: 0.8234
+  type: 'test'
+  ...
+# Subtest: UI reveal and duplicate rating clicks target the correct saved card
+ok 18 - UI reveal and duplicate rating clicks target the correct saved card
+  ---
+  duration_ms: 0.659798
+  type: 'test'
+  ...
+# Subtest: UI non-JSON response is actionable and preserves source text
+ok 19 - UI non-JSON response is actionable and preserves source text
+  ---
+  duration_ms: 0.590117
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 92.84533

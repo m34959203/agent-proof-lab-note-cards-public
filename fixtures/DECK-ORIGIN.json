@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "file": "deck-export.json",
+  "sha256": "a07c4fec509da20deb5ff1a2440c10c712b0b0c127840ead7eda057e10bdb413",
+  "origin": "2026-10-01 historical Note Cards producer browser journey export, reused in the 2026-10-06 controlled no-model walkthrough shown in the film.",
+  "notes": "Original synthetic Paper Lantern Workshop notes, identical to workshop-notes.txt.",
+  "cards": "Three historical local-model cards, subsequently reviewed in the producer journey; not a newly generated response.",
+  "progress": "Historical demonstration counters and current card retained unchanged.",
+  "sanitization": "Full fixture inspected: synthetic content, app-generated random card IDs, no credentials, private paths, sessions, personal data or hidden reasoning. No fixture bytes changed.",
+  "claimBoundary": "Import/study/edit/export demonstration only; does not reproduce model generation or code creation."
+}

@@ -1,0 +1,29 @@
+Transcribed summary of earlier recorded command outputs, before redirected logs were added.
+These are historical failures, not newly rerun commands.
+
+node --version: v22.22.1
+npm --version: 10.9.4
+npm ci --ignore-scripts --no-audit --no-fund: exit 0, "up to date in 83ms"
+
+Initial npm test (script: node --test): exit 1.
+TAP reported test/app.test.js, ERR_TEST_FAILURE, 0 passing / 1 failing file.
+No individual test results appeared under that process-isolated runner.
+
+Diagnostic node test/app.test.js: exit 1.
+9 tests: 6 pass / 3 fail.
+Failures:
+- generate → edit/delete → explicit approval → study → restart → export/import
+- invalid and oversized imports preserve saved data; stale approvals rejected
+- security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+Each failed with uncaughtException:
+  listen EPERM: operation not permitted 127.0.0.1
+  code: EPERM
+  Server.setupListenHandle [as _listen2] (node:net:1918:21)
+  listenInCluster (node:net:1997:12)
+  node:net:2206:7
+  process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+Resolution: retain a separate actual socket check; exercise the same exported HTTP
+handler in process for the deterministic no-network suite. Disable Node test process
+isolation for readable individual test output. This does not resolve the socket or
+browser gate; the later loopback-test.txt and start-attempt.txt preserve EPERM too.

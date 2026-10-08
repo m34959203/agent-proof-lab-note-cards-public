@@ -1,0 +1,47 @@
+{
+  "take": "CORRECTION-02",
+  "status": "Future explained-film plan only; no montage completed and no final release approval",
+  "original_recording": "Preserve unchanged. Inserts must identify their later capture and source checkpoint.",
+  "items": [
+    {
+      "id": "M1",
+      "at": [
+        "02:02",
+        "04:08",
+        "05:30"
+      ],
+      "action": "Add labeled later source walkthroughs with 8–12 meaningful lines per insert. Select the source relevant to each burst after checking the cast; keep filenames and checkpoint visible. Do not present later source as original live output."
+    },
+    {
+      "id": "M2",
+      "at": [
+        "00:11",
+        "04:12"
+      ],
+      "action": "Add readable inserts for broken words/commands after matching the original text. Keep complete words and command lines legible; identify reconstructed presentation as a later insert."
+    },
+    {
+      "id": "M3",
+      "start_seconds": 630.055,
+      "end_seconds": 783.382,
+      "duration_seconds": 153.327,
+      "action": "Compress the interval without new output with a visible label: Time skip — 153.327 seconds without new output. Preserve original timestamps in the edit record."
+    },
+    {
+      "id": "M4",
+      "checkpoint": "Original final 13/13",
+      "caption": "npm test — 13/13 deterministic injected tests; browser: NOT_TESTED; live model: NOT_TESTED. Underlying command: node --experimental-test-isolation=none --test test/*.test.js. This is the original checkpoint, not CORRECTION-02's 19/19 result."
+    },
+    {
+      "id": "M5",
+      "action": "Retain honest visible disclosure: Bash terminal in a PTY, automated prompt/command input, implementation in Codex CLI; no additional/nested coding CLIs or agents. No invented human listening or manual typing claim."
+    }
+  ],
+  "gates": [
+    "Readable source inserts and commands reviewed at delivery size",
+    "Timing and provenance checked against original cast",
+    "Exact-version teaching/reproduction review",
+    "Actual corrected browser verification",
+    "Final media review and release approval still pending"
+  ]
+}

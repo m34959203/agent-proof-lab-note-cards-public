@@ -1,0 +1,5 @@
+
+> note-cards-local@0.1.0 start
+> node server.js
+
+listen EPERM: operation not permitted 127.0.0.1:3210

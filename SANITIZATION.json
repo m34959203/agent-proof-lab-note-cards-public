@@ -1,0 +1,41 @@
+{
+  "policy": "Explicit replacement of private product-root strings only; no prompt edits; original artifacts preserved privately",
+  "files": [
+    {
+      "file": "evidence/correction-02-red.txt",
+      "replacement": "private product root -> <PROJECT_ROOT>",
+      "originalSha256": "c62c52a10cf586e8a51599d4582f2b5c83ca7c116b9c59abbb9c74a53307f11b",
+      "publicSha256": "de1bc5d79385babec2a4465a782ac574b5365dd4612dca9228ee9df4b97967ca",
+      "count": 10
+    },
+    {
+      "file": "evidence/loopback-test.txt",
+      "replacement": "private product root -> <PROJECT_ROOT>",
+      "originalSha256": "044c152680f9e4d119064b622f74874ae72ba9f7761c481518eb5acc3ff1d9a6",
+      "publicSha256": "9bdedba0ec2e3b9d9afc3e89d69e275016b66b8ac560986040e87379075beffe",
+      "count": 1
+    },
+    {
+      "file": "evidence/ui-harness-first-failure.txt",
+      "replacement": "private product root -> <PROJECT_ROOT>",
+      "originalSha256": "177a10f1a7b152cfcee647410e66cc0cf6de9c5bd0b91db0b21fd70ebedfd0e7",
+      "publicSha256": "00a26002f3618b2d31bbc43418bee58a8c37152e4177f16b2f402925778eb8c0",
+      "count": 8
+    },
+    {
+      "file": "evidence/ui-harness-second-failure.txt",
+      "replacement": "private product root -> <PROJECT_ROOT>",
+      "originalSha256": "7edb01dce6d65da6b4b78b3ac45af9255054a29571bfad4c02547ff7387a5a73",
+      "publicSha256": "6ee43c3d4d3152bcf0e022ec16a1880b65cfbbe96a54c1d775b72f22b16b72d4",
+      "count": 2
+    }
+  ],
+  "excluded": [
+    "Git history",
+    "saved deck data",
+    "raw agent streams",
+    "private capture infrastructure",
+    "credentials",
+    "independent raw audit logs"
+  ]
+}

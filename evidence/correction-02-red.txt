@@ -1,0 +1,161 @@
+CORRECTION-02 new diagnostic run, before production patch; updated injected harness and six regressions.
+Command: node --experimental-test-isolation=none --test test/ui.test.js
+Exit code: 1
+NOT_TESTED: real browser, layout, live model.
+
+TAP version 13
+# Subtest: UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+ok 1 - UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+  ---
+  duration_ms: 2.186438
+  type: 'test'
+  ...
+# Subtest: pending regeneration preserves a newer question edit
+not ok 2 - pending regeneration preserves a newer question edit
+  ---
+  duration_ms: 2.328022
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:65:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Question 0'
+    - 'Newer reviewed text'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Newer reviewed text'
+  actual: 'Question 0'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:71:12)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: pending regeneration preserves a newer answer edit
+not ok 3 - pending regeneration preserves a newer answer edit
+  ---
+  duration_ms: 1.010505
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:65:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Answer 0'
+    - 'Newer reviewed text'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Newer reviewed text'
+  actual: 'Answer 0'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:71:12)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: pending regeneration preserves a newer quote edit
+not ok 4 - pending regeneration preserves a newer quote edit
+  ---
+  duration_ms: 1.291514
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:65:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Original synthetic notes.'
+    - 'Newer reviewed text'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Newer reviewed text'
+  actual: 'Original synthetic notes.'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:71:12)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: pending regeneration preserves a deletion
+not ok 5 - pending regeneration preserves a deletion
+  ---
+  duration_ms: 1.091846
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:75:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    3 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 3
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:80:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: pending regeneration cannot resurrect an approved draft: generation-first
+not ok 6 - pending regeneration cannot resurrect an approved draft: generation-first
+  ---
+  duration_ms: 1.089483
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:85:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:99:12)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: pending regeneration cannot resurrect an approved draft: approval-first
+ok 7 - pending regeneration cannot resurrect an approved draft: approval-first
+  ---
+  duration_ms: 0.902024
+  type: 'test'
+  ...
+# Subtest: UI edit/delete requires reapproval; disk error preserves the editable draft
+ok 8 - UI edit/delete requires reapproval; disk error preserves the editable draft
+  ---
+  duration_ms: 0.913393
+  type: 'test'
+  ...
+# Subtest: UI reveal and duplicate rating clicks target the correct saved card
+ok 9 - UI reveal and duplicate rating clicks target the correct saved card
+  ---
+  duration_ms: 1.296681
+  type: 'test'
+  ...
+# Subtest: UI non-JSON response is actionable and preserves source text
+ok 10 - UI non-JSON response is actionable and preserves source text
+  ---
+  duration_ms: 0.735219
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 5
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21.462899

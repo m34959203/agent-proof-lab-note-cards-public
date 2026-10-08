@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "id": "BUILD-01",
+      "submittedAtUtc": "2026-10-01T04:27:52.155Z",
+      "tool": "codex-cli 0.153.4",
+      "model": "gpt-6-astra",
+      "baselineGitHead": "56a6fcebc958eb11b87609c2e975a405729234f7",
+      "baselineGitScope": "Frozen input documents only, not the corrected product commit",
+      "prompt": "prompts/BUILD-01.txt",
+      "promptSha256": "b617c72eb36152c645d775d4e9c9a0d0dcfa2f976f13012d4cd816388ecbe2f4",
+      "context": [
+        "BRIEF.md",
+        "ACCEPTANCE.md",
+        "manifest.json"
+      ],
+      "sourceArchiveSha256": "29094e8cfc960dab4b566526d54f38ab23b69be3ae24ee1ee3a796ecee7af043",
+      "recordingSha256": "425a37b4b4264801c9c36109e50004eca0af52dab144ec2237f6b0e1f28daa54",
+      "exitCodes": {
+        "codex": 0,
+        "tests": 0
+      },
+      "independentAcceptance": false,
+      "observedResult": "Initial implementation; preserved failing tests and socket EPERM; later final 13 deterministic tests passed. Live/browser not tested at that checkpoint."
+    },
+    {
+      "id": "CORRECTION-02",
+      "submittedAtUtc": "2026-10-01T05:12:04.464Z",
+      "tool": "codex-cli 0.153.4",
+      "model": "gpt-6-astra",
+      "baselineGitHead": "56a6fcebc958eb11b87609c2e975a405729234f7",
+      "baselineGitScope": "Frozen input documents only, not the corrected product commit",
+      "prompt": "prompts/CORRECTION-02.txt",
+      "promptSha256": "05f93efebdc7fba450dcda656ee76cdac3529b8616065aeb0180d6b363ff9102",
+      "context": [
+        "BRIEF.md",
+        "ACCEPTANCE.md",
+        "manifest.json"
+      ],
+      "sourceArchiveSha256": "c41af257b65c0db2a8a9623535c39c7103354ba9689d9c5114cdac647b53786d",
+      "recordingSha256": "51dff07b6f27f4eccd41799f1f18b6b9b7a39a6b68285342dca960e5fd8f607c",
+      "exitCodes": {
+        "codex": 0,
+        "tests": 0
+      },
+      "independentAcceptance": false,
+      "inputCheckpoint": "Original implementation archive 29094e8cfc960dab4b566526d54f38ab23b69be3ae24ee1ee3a796ecee7af043 plus copied exact BUILD-01 prompt and review findings in supplied correction request.",
+      "observedResult": "Draft revision and title-wrap fixes; red 5/10 UI then green 19/19 full suite. Documentation and attribution corrected; no new model inference."
+    }
+  ],
+  "manualFollowup": {
+    "atUtc": "2026-10-01T05:24:43.000Z",
+    "action": "Guarded Bash recipe manual documentation patch and later source walkthrough",
+    "codingPromptSubmitted": false,
+    "result": "Guard applied; new 19/19 tests passed",
+    "sourceArchiveSha256": "79a62cf6c228bb655783f94c3bcc10488c2894fc317dac04c8f341fb4e9c0e5b",
+    "failedEarlierDocPatchTakePreserved": true
+  }
+}

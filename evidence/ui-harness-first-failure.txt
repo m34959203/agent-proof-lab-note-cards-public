@@ -1,0 +1,149 @@
+
+> note-cards-local@0.1.0 test
+> node --experimental-test-isolation=none --test test/*.test.js
+
+TAP version 13
+# Subtest: input boundaries, exact quotes, empty decks and schema validation
+ok 1 - input boundaries, exact quotes, empty decks and schema validation
+  ---
+  duration_ms: 1.406577
+  type: 'test'
+  ...
+# Subtest: generate → edit/delete → explicit approval → study → restart → export/import
+ok 2 - generate → edit/delete → explicit approval → study → restart → export/import
+  ---
+  duration_ms: 14.546768
+  type: 'test'
+  ...
+# Subtest: invalid and oversized imports preserve saved data; stale approvals rejected
+ok 3 - invalid and oversized imports preserve saved data; stale approvals rejected
+  ---
+  duration_ms: 4.077448
+  type: 'test'
+  ...
+# Subtest: failed atomic write leaves prior disk and in-memory state intact and retry works
+ok 4 - failed atomic write leaves prior disk and in-memory state intact and retry works
+  ---
+  duration_ms: 5.588233
+  type: 'test'
+  ...
+# Subtest: security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+ok 5 - security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+  ---
+  duration_ms: 3.372368
+  type: 'test'
+  ...
+# Subtest: adapter verifies digest, bounds request, and returns only validated injected cards
+ok 6 - adapter verifies digest, bounds request, and returns only validated injected cards
+  ---
+  duration_ms: 2.802341
+  type: 'test'
+  ...
+# Subtest: adapter missing configuration and bad digest never generate; resource failure latches
+ok 7 - adapter missing configuration and bad digest never generate; resource failure latches
+  ---
+  duration_ms: 0.440329
+  type: 'test'
+  ...
+# Subtest: adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+ok 8 - adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+  ---
+  duration_ms: 2.591275
+  type: 'test'
+  ...
+# Subtest: adapter has one generation slot, bounded timeout, then stops dependency
+ok 9 - adapter has one generation slot, bounded timeout, then stops dependency
+  ---
+  duration_ms: 26.146923
+  type: 'test'
+  ...
+# Subtest: UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+not ok 10 - UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+  ---
+  duration_ms: 1.750078
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:35:122)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: UI edit/delete requires reapproval; disk error preserves the editable draft
+not ok 11 - UI edit/delete requires reapproval; disk error preserves the editable draft
+  ---
+  duration_ms: 1.509824
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:43:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot set properties of null (setting 'value')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:48:73)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: UI reveal and duplicate rating clicks target the correct saved card
+not ok 12 - UI reveal and duplicate rating clicks target the correct saved card
+  ---
+  duration_ms: 0.791942
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:54:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:61:72)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: UI non-JSON response is actionable and preserves source text
+not ok 13 - UI non-JSON response is actionable and preserves source text
+  ---
+  duration_ms: 0.676054
+  type: 'test'
+  location: '<PROJECT_ROOT>/test/ui.test.js:64:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /not JSON/. Input:
+    
+    'Cannot reach Note Cards. Check that the local server is running. Your on-screen text is kept.'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: 'Cannot reach Note Cards. Check that the local server is running. Your on-screen text is kept.'
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file://<PROJECT_ROOT>/test/ui.test.js:66:110)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 9
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 88.34786

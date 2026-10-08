@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "projectId": "project-004-note-cards",
+  "frozenAtUtc": "2026-10-01T04:02:51.422597+00:00",
+  "phase": "MANIFEST_BEFORE_IMPLEMENTATION",
+  "source": "https://devpost.com/software/study-buddy-uvcsnh",
+  "brief": "BRIEF.md",
+  "acceptance": "ACCEPTANCE.md",
+  "user": "Solo learner using own non-sensitive notes",
+  "benefit": "Make, verify and study a saved flashcard deck from pasted notes",
+  "data": "Original fictional workshop notes; no personal or third-party catalog data",
+  "runtime": "v22.22.1",
+  "dependencies": "Node built-ins; no runtime npm dependencies planned",
+  "codingTool": "codex-cli 0.153.4",
+  "codingModel": "Actual outer-controller selected model must be logged by recorded take; no forced tool comparison",
+  "model": {
+    "name": "gemma4:26b-a4b-it-qat",
+    "expectedDigest": "2dd70431afed94dd3688d790443768c1487ed086b57147ff083851116ae4c4e4",
+    "url": "http://127.0.0.1:11434",
+    "availability": "Listed by read-only /api/tags; inference not yet tested",
+    "generationTimeoutSeconds": 120,
+    "concurrency": 1,
+    "maxOutputTokens": 1400,
+    "sharedServiceChanges": false
+  },
+  "environment": "Linux server / Bash; browser PTY capture, not native desktop. PowerShell, xterm, Xvfb and DISPLAY absent in preflight. Windows commands must be separately verified before claiming tested Windows support.",
+  "cost": {
+    "newSpend": false,
+    "downloads": false,
+    "existingSubscription": true,
+    "actualCurrencyCost": "Not separately metered; do not invent zero total operating cost"
+  },
+  "rights": "Independently authored implementation/data; source only inspiration. Existing dependency notices retained. No third-party code/media copied.",
+  "scheduleEstimate": "Up to 10 working days, reassess after capture and first model-backed milestone; one useful episode without duration padding.",
+  "capture": {
+    "mustPrecedeFirstSubstantivePrompt": true,
+    "seconds": [
+      30,
+      45
+    ],
+    "baseline": "Empty product directory inventory; docs are inputs, no product code",
+    "mode": "Real live Bash PTY streamed to browser with automated input disclosure"
+  },
+  "independentAcceptance": false,
+  "releaseApproved": false
+}

@@ -1,0 +1,41 @@
+CORRECTION-02 new local checks
+node --check public/app.js: exit 0, no output.
+node --version: v22.22.1
+npm --version: 10.9.4
+codex exec --help: exit 0; help returned; read-only PATH-alias warning.
+No model session invoked; help syntax only.
+
+python3 - integrity/JSON/Bash check: exit 0
+Captured output:
+SHA256 unchanged: BRIEF.md
+SHA256 unchanged: ACCEPTANCE.md
+SHA256 unchanged: manifest.json
+SHA256 unchanged: evidence/initial-failures.txt
+SHA256 unchanged: evidence/loopback-test.txt
+SHA256 unchanged: evidence/npm-test-final.txt
+SHA256 unchanged: evidence/npm-test.txt
+SHA256 unchanged: evidence/start-attempt.txt
+SHA256 unchanged: evidence/ui-harness-first-failure.txt
+SHA256 unchanged: evidence/ui-harness-second-failure.txt
+SHA256 unchanged: evidence/first-take-archive/IMPLEMENTATION-REPORT.md
+EDITOR-NOTES.json: valid JSON
+Guide Bash block 1 : syntax valid; not executed
+Guide Bash block 2 : syntax valid; not executed
+
+Archive comparison: first helper command had a Python syntax error; orchestration then failed:
+SyntaxError: Unexpected token 'F', "  File "<std"... is not valid JSON
+The original Python stderr was not retained here; it is not reconstructed.
+Corrected new archive comparison result:
+{
+  "archiveMatchesOriginals": true,
+  "files": [
+    "IMPLEMENTATION-REPORT.md",
+    "README.md",
+    "test/ui.test.js",
+    "public/style.css",
+    "public/app.js"
+  ]
+}
+
+git diff --check: exit 0 (untracked implementation files limit coverage).
+Browser/layout/live model: NOT_TESTED in this take.

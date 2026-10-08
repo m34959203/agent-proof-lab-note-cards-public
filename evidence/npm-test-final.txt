@@ -1,0 +1,92 @@
+
+> note-cards-local@0.1.0 test
+> node --experimental-test-isolation=none --test test/*.test.js
+
+TAP version 13
+# Subtest: input boundaries, exact quotes, empty decks and schema validation
+ok 1 - input boundaries, exact quotes, empty decks and schema validation
+  ---
+  duration_ms: 1.351091
+  type: 'test'
+  ...
+# Subtest: generate → edit/delete → explicit approval → study → restart → export/import
+ok 2 - generate → edit/delete → explicit approval → study → restart → export/import
+  ---
+  duration_ms: 14.523136
+  type: 'test'
+  ...
+# Subtest: invalid and oversized imports preserve saved data; stale approvals rejected
+ok 3 - invalid and oversized imports preserve saved data; stale approvals rejected
+  ---
+  duration_ms: 4.007682
+  type: 'test'
+  ...
+# Subtest: failed atomic write leaves prior disk and in-memory state intact and retry works
+ok 4 - failed atomic write leaves prior disk and in-memory state intact and retry works
+  ---
+  duration_ms: 5.186749
+  type: 'test'
+  ...
+# Subtest: security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+ok 5 - security: cross-origin writes, Host, paths, content type, malformed JSON and inert text
+  ---
+  duration_ms: 3.231861
+  type: 'test'
+  ...
+# Subtest: adapter verifies digest, bounds request, and returns only validated injected cards
+ok 6 - adapter verifies digest, bounds request, and returns only validated injected cards
+  ---
+  duration_ms: 2.56095
+  type: 'test'
+  ...
+# Subtest: adapter missing configuration and bad digest never generate; resource failure latches
+ok 7 - adapter missing configuration and bad digest never generate; resource failure latches
+  ---
+  duration_ms: 0.410627
+  type: 'test'
+  ...
+# Subtest: adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+ok 8 - adapter rejects malformed, incomplete, non-JSON, oversized and unsupported quotes
+  ---
+  duration_ms: 2.417153
+  type: 'test'
+  ...
+# Subtest: adapter has one generation slot, bounded timeout, then stops dependency
+ok 9 - adapter has one generation slot, bounded timeout, then stops dependency
+  ---
+  duration_ms: 26.1401
+  type: 'test'
+  ...
+# Subtest: UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+ok 10 - UI preserves invalid notes, rejects stale generation and suppresses duplicate generation clicks
+  ---
+  duration_ms: 1.613082
+  type: 'test'
+  ...
+# Subtest: UI edit/delete requires reapproval; disk error preserves the editable draft
+ok 11 - UI edit/delete requires reapproval; disk error preserves the editable draft
+  ---
+  duration_ms: 1.841891
+  type: 'test'
+  ...
+# Subtest: UI reveal and duplicate rating clicks target the correct saved card
+ok 12 - UI reveal and duplicate rating clicks target the correct saved card
+  ---
+  duration_ms: 0.73075
+  type: 'test'
+  ...
+# Subtest: UI non-JSON response is actionable and preserves source text
+ok 13 - UI non-JSON response is actionable and preserves source text
+  ---
+  duration_ms: 0.628272
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 87.145483
